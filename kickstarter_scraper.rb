@@ -1,4 +1,5 @@
-require Nokogiri
+require "nokogiri"
+require "pry"
 
 
 def create_project_hash
@@ -6,5 +7,7 @@ def create_project_hash
   htlml = File.read('fixtures/kickstarter.html')
 
   kickstarter = Nokogiri::HTML(html)
-
+    binding.pry
 end
+
+create_project_hash
